@@ -9,14 +9,13 @@
 
 public class CentroComercial {
     // Atributos
-    String domicilio;
-    double superficie; 
-    String nombre; 
-    
-    int numPisos;
-    int numElevadores;
-    int numEntradas;
-    int numSanitarios;
+    private String domicilio;
+    private double superficie; 
+    private String nombre; 
+    private int numPisos;
+    private int numElevadores;
+    private int numEntradas;
+    private int numSanitarios;
 
     // Metodos
     CentroComercial(){
