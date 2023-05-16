@@ -57,4 +57,13 @@ public class Restaurante {
     public double getPrecioPromedio() {
         return precioPromedio;
     }
+
+    public String toString(){
+        return "Nombre: " + nombre + 
+        "\nProducto: " + producto + 
+        "\nComensales: " + numComensales + 
+        "\nMaximo de comensales: " + maxComensales + 
+        "\nPrecio promedio: " + precioPromedio + 
+        "\nIngresos: " + ingresos + "\n";
+    }
 }

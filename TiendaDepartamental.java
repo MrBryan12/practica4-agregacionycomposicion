@@ -1,5 +1,3 @@
-package Practica4;
-
 import java.util.List;
 
 public class TiendaDepartamental {
@@ -76,4 +74,16 @@ public class TiendaDepartamental {
       provedor.devuelve_nombre_proveedor();
     }
   }
+
+  public String toString(){
+    return "Nombre de la tienda: " + nomtienda + "\n" +
+    "Producto: " + producto + "\n" +
+    "Nombre de la franquicia: " + nombre_franquicia + "\n" +
+    "Dinero en caja: " + dinero_caja + "\n" +
+    "Número de cajas registradoras: " + num_cajasregistradoras + "\n" +
+    "Teléfono: " + telefono + "\n" +
+    "Provedores: " + provedores + "\n"
+    ;
+  }
+
 }

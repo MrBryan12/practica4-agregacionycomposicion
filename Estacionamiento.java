@@ -66,4 +66,8 @@ public class Estacionamiento {
     public boolean isVigilanciaActiva() {
         return vigilanciaActiva;
     }
+
+    public String toString(){
+        return "Estacionamiento: " + numCarros + " carros, " + numMotos + " motos, " + superficie + " m2, $" + tarifa + " por hora.";
+    }
 }

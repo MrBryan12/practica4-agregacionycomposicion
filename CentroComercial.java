@@ -7,50 +7,124 @@
  * Version: 1.0
  */
 
+ import java.util.List;
+
 public class CentroComercial {
     // Atributos
     private String domicilio;
-    private double superficie; 
-    private String nombre; 
+    private double superficie;
+    private String nombre;
     private int numPisos;
     private int numElevadores;
     private int numEntradas;
     private int numSanitarios;
 
+    // Composicion
+    private Estacionamiento estacionamiento;
+    private TiendaDepartamental tiendaDepartamental;
+
+    // Agregacion
+    private int numRestaurantes;
+    private Restaurante[] restaurantes;
+
     // Metodos
-    CentroComercial(){
+    CentroComercial() {
 
     }
 
-    public String getDomicilio(){
+    CentroComercial(
+        String domicilio, 
+        double superficie, 
+        String nombre, 
+        int numPisos, 
+        int numElevadores, 
+        int numEntradas, 
+        int numSanitarios, 
+        int maxCarro, 
+        double superficieEstacionamiento, 
+        double tarifa,
+        String nomtienda,
+        String producto,
+        String nombre_franquicia,
+        int dinero_caja,
+        int num_cajasregistradoras,
+        String telefono,
+        List<Provedor> provedores){
+            this.domicilio = domicilio;
+            this.superficie = superficie;
+            this.nombre = nombre;
+            this.numPisos = numPisos;
+            this.numElevadores = numElevadores;
+            this.numEntradas = numEntradas;
+            this.numSanitarios = numSanitarios;
+            this.estacionamiento = new Estacionamiento( maxCarro, superficieEstacionamiento, tarifa);
+            this.tiendaDepartamental = new TiendaDepartamental(
+                nomtienda,
+                producto,
+                nombre_franquicia,
+                dinero_caja,
+                num_cajasregistradoras,
+                telefono,
+                provedores
+            );
+            this.numRestaurantes = 0;
+            this.restaurantes = new Restaurante[2];
+        }
+
+    public String getDomicilio() {
         return domicilio;
     }
 
-    public double getSuperficie(){
+    public double getSuperficie() {
         return superficie;
     }
 
-    public String getNombre(){
+    public String getNombre() {
         return nombre;
     }
 
-    public int getNumSanitarios(){
+    public int getNumSanitarios() {
         return numSanitarios;
     }
 
-    public void setDomicilio(String dom){
+    public void setDomicilio(String dom) {
         domicilio = dom;
     }
 
-    public void setSuperficie(double metros2){
+    public void setSuperficie(double metros2) {
         superficie = metros2;
     }
 
-    public void setNombre(String nom){
+    public void setNombre(String nom) {
         nombre = nom;
     }
 
-    public void setNumSanitarios(int num){
+    public void setNumSanitarios(int num) {
         numSanitarios = num;
+    }
+
+    // Agregacion
+    public void setRestaurante(Restaurante nuevoRestaurante){
+        if(numRestaurantes<2){
+            restaurantes[numRestaurantes] = nuevoRestaurante;
+            numRestaurantes++;
+        }else{
+            System.out.println("No se pueden agregar mas restaurantes");
+        }
+    }
+
+    public String toString(){
+        return "Nombre del centro comercial: " + nombre + "\n" +
+        "Domicilio: " + domicilio + "\n" +
+        "Superficie: " + superficie + " m^2\n" +
+        "Numero de pisos: " + numPisos + " pisos\n" +
+        "Numero de elevadores: " + numElevadores + " elevadores\n" +
+        "Numero de entradas: " + numEntradas + " entradas\n" +
+        "Numero de sanitarios: " + numSanitarios + " sanitarios\n" +
+        "Numero de restaurantes: " + numRestaurantes + " restaurantes\n\n" +
+        "Restaurante 1. " + restaurantes[0] + "\n" +
+        "Restaurante 2. " + restaurantes[1] + "\n" +
+        "" + estacionamiento + "\n" +
+        "" + tiendaDepartamental + "\n";
     }
 }

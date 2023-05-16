@@ -1,5 +1,3 @@
-package Practica4;
-
 public class Provedor {
 
   // Atributos de la clase Provedor
