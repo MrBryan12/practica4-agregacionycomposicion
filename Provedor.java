@@ -17,4 +17,8 @@ public class Provedor {
   public void devuelve_nombre_proveedor() {
     System.out.println(nombre_proveedor);
   }
+
+  public String toString() {
+    return nombre_proveedor;
+  }
 }

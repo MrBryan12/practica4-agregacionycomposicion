@@ -7,12 +7,15 @@
  * Version: 1.0
  */
 
+ import java.util.List;
+ import java.util.ArrayList;
 public class Main{
     public static void main(String[] args) {
-        // System.out.println("Prueba clase CentroComercial");
-        // CentroComercial obj = new CentroComercial();
-        // obj.setDomicilio("Avenida");
-        // System.out.println("Domicilio: " + obj.getDomicilio());
+        List<Provedor> proveedores = new ArrayList<>();
+        Provedor proveedor1 = new Provedor("Microsoft");
+        proveedores.add(proveedor1);
+
+
         System.out.println("\t\tPractica 4 - Agregacion y Composicion");
         CentroComercial cc = new CentroComercial(
             "Tecamac", 320, 
@@ -30,14 +33,13 @@ public class Main{
             10000, 
             3, 
             "55-55-55-55",
-            null);
+            proveedores);
 
             Restaurante starbuks = new Restaurante("Starbuks", "Cafe", 60, 80);
             Restaurante mcdonals = new Restaurante("McDonals", "Hamburguesas", 80, 45);
 
             cc.setRestaurante(starbuks);
             cc.setRestaurante(mcdonals);
-
             System.out.println(cc);
     }
 }
