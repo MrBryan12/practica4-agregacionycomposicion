@@ -1,5 +1,5 @@
 /*
- * Clase TiendaDepartamental
+ * Clase Estacionamiento
  * 
  * Autores: Cazares Leyva Bryan Jhoan, Gachuz Davila Ulises y Morales Martínez Arturo
  * Descripcion: Clase Estacionamiento que se relaciona con la clase TiendaDepartamental

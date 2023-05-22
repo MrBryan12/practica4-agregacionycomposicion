@@ -1,5 +1,5 @@
 /*
- * Clase TiendaDepartamental
+ * Clase Proveedor
  * 
  * Autores: Cazares Leyva Bryan Jhoan, Gachuz Davila Ulises y Morales Martínez Arturo
  * Descripcion: Clase Proveedor que se relaciona con la clase TiendaDepartamental

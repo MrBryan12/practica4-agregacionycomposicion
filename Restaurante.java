@@ -1,5 +1,5 @@
 /*
- * Clase TiendaDepartamental
+ * Clase Restaurante
  * 
  * Autores: Cazares Leyva Bryan Jhoan, Gachuz Davila Ulises y Morales Martínez Arturo
  * Descripcion: Clase Restaurante que se relaciona con la clase CentroComercial
