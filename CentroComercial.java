@@ -18,16 +18,12 @@ public class CentroComercial {
     private int numElevadores;
     private int numEntradas;
     private int numSanitarios;
-
-    // Composicion
     private Estacionamiento estacionamiento;
     private TiendaDepartamental tiendaDepartamental;
-
-    // Agregacion
     private int numRestaurantes;
     private Restaurante[] restaurantes;
 
-    // Metodos
+    // Constructores
     CentroComercial() {
 
     }
@@ -49,7 +45,10 @@ public class CentroComercial {
         int dinero_caja,
         int num_cajasregistradoras,
         String telefono,
-        List<Provedor> provedores){
+        List<Provedor> provedores,
+        Restaurante restaurante1,   
+        Restaurante restaurante2
+        ){  //Recibimos los dos restaurantes como argumentos por ser agregacion
             this.domicilio = domicilio;
             this.superficie = superficie;
             this.nombre = nombre;
@@ -67,10 +66,13 @@ public class CentroComercial {
                 telefono,
                 provedores
             );
-            this.numRestaurantes = 0;
             this.restaurantes = new Restaurante[2];
+            restaurantes[0] = restaurante1;
+            restaurantes[1] = restaurante2;
+            this.numRestaurantes = restaurantes.length;
         }
 
+    // Getters 
     public String getDomicilio() {
         return domicilio;
     }
@@ -87,6 +89,23 @@ public class CentroComercial {
         return numSanitarios;
     }
 
+    public int getNumRestaurantes(){
+        return numRestaurantes;
+    }
+
+    public Estacionamiento getEstacionamiento(){
+        return estacionamiento;
+    }
+
+    public TiendaDepartamental getTiendaDepartamental(){
+        return tiendaDepartamental;
+    }
+
+    public Restaurante[] getRestaurantes(){
+        return restaurantes;
+    }
+
+    // Setters
     public void setDomicilio(String dom) {
         domicilio = dom;
     }
@@ -103,15 +122,14 @@ public class CentroComercial {
         numSanitarios = num;
     }
 
-    // Agregacion
-    public void setRestaurante(Restaurante nuevoRestaurante){
-        if(numRestaurantes<2){
-            restaurantes[numRestaurantes] = nuevoRestaurante;
-            numRestaurantes++;
-        }else{
-            System.out.println("No se pueden agregar mas restaurantes");
-        }
+    public void setEstacionamiento(Estacionamiento est){
+        estacionamiento = est;
     }
+
+    public void setTiendaDepartamental(TiendaDepartamental tienda){
+        tiendaDepartamental = tienda;
+    }
+
 
     public String toString(){
         return "Nombre del centro comercial: " + nombre + "\n" +
@@ -125,6 +143,6 @@ public class CentroComercial {
         "Restaurante 1. " + restaurantes[0] + "\n" +
         "Restaurante 2. " + restaurantes[1] + "\n" +
         "" + estacionamiento + "\n" +
-        "" + tiendaDepartamental + "\n";
+        "" + tiendaDepartamental + "";
     }
 }

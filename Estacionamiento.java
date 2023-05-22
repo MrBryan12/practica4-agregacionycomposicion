@@ -1,3 +1,12 @@
+/*
+ * Clase TiendaDepartamental
+ * 
+ * Autores: Cazares Leyva Bryan Jhoan, Gachuz Davila Ulises y Morales Martínez Arturo
+ * Descripcion: Clase Estacionamiento que se relaciona con la clase TiendaDepartamental
+ * Fecha: 17/05/2023
+ * Version: 1.0
+ */
+
 public class Estacionamiento {
     private int numCarros;
     private double superficie;
@@ -5,6 +14,12 @@ public class Estacionamiento {
     private double tarifa;
     private int numMotos;
     private boolean vigilanciaActiva;
+
+
+    // Constructores
+    Estacionamiento() {
+
+    }
 
     public Estacionamiento(int maxCarros, double superficie, double tarifa) {
         this.numCarros = 0;

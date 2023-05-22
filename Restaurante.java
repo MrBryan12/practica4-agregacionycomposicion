@@ -1,3 +1,12 @@
+/*
+ * Clase TiendaDepartamental
+ * 
+ * Autores: Cazares Leyva Bryan Jhoan, Gachuz Davila Ulises y Morales Martínez Arturo
+ * Descripcion: Clase Restaurante que se relaciona con la clase CentroComercial
+ * Fecha: 17/05/2023
+ * Version: 1.0
+ */
+
 public class Restaurante {
     private String nombre;
     private String producto;
@@ -5,6 +14,13 @@ public class Restaurante {
     private int maxComensales;
     private double precioPromedio;
     private double ingresos;
+
+    // Constructores
+    Restaurante(String nom, String producto) {
+        nombre = nom;
+        this.producto = producto;
+    }
+
 
     public Restaurante(String nombre, String producto, int maxComensales, double precioPromedio) {
         this.nombre = nombre;

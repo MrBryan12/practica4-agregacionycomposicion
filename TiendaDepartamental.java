@@ -1,3 +1,12 @@
+/*
+ * Clase TiendaDepartamental
+ * 
+ * Autores: Cazares Leyva Bryan Jhoan, Gachuz Davila Ulises y Morales Martínez Arturo
+ * Descripcion: Clase TiendaDepartamental que se relaciona con la clase Provedor
+ * Fecha: 17/05/2023
+ * Version: 1.0
+ */
+
 import java.util.List;
 
 public class TiendaDepartamental {
@@ -12,7 +21,12 @@ public class TiendaDepartamental {
   private String telefono;
   private List<Provedor> provedores;
 
-  // Constructor
+  // Constructores
+  TiendaDepartamental(String nom, String producto) {
+    nomtienda = nom;
+    this.producto = producto;
+  }
+
   public TiendaDepartamental(
     String nomtienda,
     String producto,
